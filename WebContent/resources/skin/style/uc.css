@@ -1,0 +1,47 @@
+/* UC列表风格 */
+.list1 {
+	BACKGROUND-COLOR: #efefef; BORDER-RIGHT: #636563 1px solid; HEIGHT: 20px
+}
+.list_title {
+	/*BACKGROUND-COLOR: #336699; BORDER-BOTTOM: 1px solid #000000 ; BORDER-TOP: #000000 1px solid; COLOR: #ffffff; HEIGHT: 20px*/
+background:url(headerBg.gif);
+background-color:#dddddd;
+white-space:nowrap;word-break:keep-all;word-wrap:normal;
+color:#3A3A3A;
+font-weight:bolder;
+height:23px;
+text-align:center;
+
+	/* overflow:hidden; */
+	overflow:visible;
+}
+.list_right {
+	 height:23}
+.list_border {
+	 height:23}
+
+.button-large{font-family:tahoma; font-size: 12px;	width: 120px;	height: 20px;	background-image: url(button-large.bmp);	border: none}
+.button-large-onfocus{font-family:tahoma; font-size: 12px;	width: 120px;	height: 20px;	background-image: url(button-large-onfocus.bmp);	border: none}
+
+/* 日历选择窗口样式 */
+.text
+{
+   border-Style="solid"; border-Width="1px"; border-Color="#99AAAA"; 
+   background-Color="#f6f6f6"; color="blue"; 
+   font-family:tahoma; font-size:12px
+}
+
+.dropdown_button
+{
+	border: #333333 1px solid;
+	font-family: Marlett;
+	font-size: 10px;
+	cursor: hand;
+}
+
+.calendar
+{
+	BORDER-COLLAPSE: collapse;
+	BORDER: gray 1px solid;
+	FONT-SIZE: 9pt;
+}

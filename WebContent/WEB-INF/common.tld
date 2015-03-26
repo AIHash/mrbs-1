@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE taglib PUBLIC "-//Sun Microsystems, Inc.//DTD JSP Tag Library 1.1//EN" "http://java.sun.com/j2ee/dtds/web-jsptaglibrary_1_1.dtd">
+
+<taglib>
+
+	<tlibversion>1.0</tlibversion>
+	<jspversion>1.1</jspversion>
+	<shortname>Common Tag Library</shortname>
+	<info>This tag library is designed to solve most common problems such as tree, page etc.</info>
+
+  	<!--========================================== 资源文件标签  ==========================================-->
+	<tag>
+	    <name>message</name>
+	    <tagclass>com.wafersystems.mrbs.tag.MessageTag</tagclass>
+	    <bodycontent>JSP</bodycontent>
+
+	    <attribute>
+	      <name>key</name>
+	      <required>true</required>
+	      <rtexprvalue>true</rtexprvalue>
+	    </attribute>
+
+	    <attribute>
+	      <name>args</name>
+	      <required>false</required>
+	      <rtexprvalue>true</rtexprvalue>
+	    </attribute>
+	</tag>
+	
+	<!-- ========================================== 页面头部js、css等资源标签==========================================  -->
+	<tag>
+		<name>pageHeader</name>
+		<tagclass>com.wafersystems.mrbs.tag.PageHeaderTag</tagclass>
+		<bodycontent>JSP</bodycontent>
+		<attribute>
+			<name>hasEcList</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<!-- description>是否包含ECside信息</description-->
+		</attribute>
+	</tag>
+	
+	<!--========================================== 系统导航条标签 ==========================================-->
+	<tag>
+		<name>navigator</name>
+		<tagclass>com.wafersystems.mrbs.tag.NavigatorTag</tagclass>
+		<bodycontent>JSP</bodycontent>
+
+		<attribute>
+			<name>position</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+			<!--description>具体的位置信息</description-->
+		</attribute>
+	</tag>
+	
+	<!--========================================== 树型标签 ==========================================-->
+	<!-- 树型标签 -->
+	<tag>
+		<name>tree</name>
+		<tagclass>com.wafersystems.mrbs.tag.tree.TreeTag</tagclass>
+		<bodycontent>JSP</bodycontent>
+		
+		<attribute>
+		  <name>treeName</name>
+		  <required>true</required>
+		  <rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+		  <name>target</name>
+		  <required>false</required>
+		  <rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+		  <name>href</name>
+		  <required>false</required>
+		  <rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+		  <name>showHref</name>
+		  <required>false</required>
+		  <rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+		  <name>nodeNoWidth</name>
+		  <required>false</required>
+		  <rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+		  <name>type</name>
+		  <required>false</required>
+		  <rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+		  <name>expandLevel</name>
+		  <required>false</required>
+		  <rtexprvalue>true</rtexprvalue>
+		</attribute>
+		
+		<attribute>
+		  <name>refreshMode</name>
+		  <required>false</required>
+		  <rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+	
+	<!-- 样式标签 -->
+ 	<tag>
+		<name>treeStyle</name>
+		<tagclass>com.wafersystems.mrbs.tag.tree.StyleTag</tagclass>
+		<bodycontent>JSP</bodycontent>
+		
+		<attribute>
+		  <name>imagesDir</name>
+		  <required>false</required>
+		  <rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+		  <name>showLine</name>
+		  <required>false</required>
+		  <rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+		  <name>showSonNodeCount</name>
+		  <required>false</required>
+		  <rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<!-- 根节点标签 -->
+ 	<tag>
+		<name>treeRoot</name>
+		<tagclass>com.wafersystems.mrbs.tag.tree.RootTag</tagclass>
+		<bodycontent>JSP</bodycontent>
+		
+		<attribute>
+		  <name>id</name>
+		  <required>true</required>
+		  <rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+		  <name>nodeNo</name>
+		  <required>true</required>
+		  <rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+		  <name>name</name>
+		  <required>false</required>
+		  <rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+		  <name>showHref</name>
+		  <required>false</required>
+		  <rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+		  <name>remark</name>
+		  <required>false</required>
+		  <rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+	
+	<!--========================================== 日期时间下拉列表 ==========================================-->
+	<tag>
+	    <name>dateTimeList</name>
+	    <tagclass>com.wafersystems.mrbs.tag.DateTimeTag</tagclass>
+	    <bodycontent>JSP</bodycontent>
+
+	    <attribute>
+	      <name>name</name>
+	      <required>true</required>
+	      <rtexprvalue>true</rtexprvalue>
+	    </attribute>
+
+	    <attribute>
+	      <name>timeFlag</name>
+	      <required>false</required>
+	      <rtexprvalue>true</rtexprvalue>
+	    </attribute>
+
+	    <attribute>
+	      <name>others</name>
+	      <required>false</required>
+	      <rtexprvalue>true</rtexprvalue>
+	    </attribute>
+
+	    <attribute>
+	      <name>type</name>
+	      <required>false</required>
+	      <rtexprvalue>true</rtexprvalue>
+	    </attribute>
+	
+	    <attribute>
+	      <name>value</name>
+	      <required>false</required>
+	      <rtexprvalue>true</rtexprvalue>
+	    </attribute>
+
+	</tag>
+  	
+</taglib>

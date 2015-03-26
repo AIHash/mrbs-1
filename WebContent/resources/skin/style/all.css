@@ -1,0 +1,13 @@
+/* 页面字体和边距控制 */
+BODY {
+	COLOR: #000000; FONT-FAMILY: 'Arial,宋体'; FONT-SIZE: 12px; MARGIN: 0px; margin-left: 0px; margin-top: 0px;
+}
+
+/* 表格字体 */
+TABLE {
+	FONT-SIZE: 12px; FONT-FAMILY: 'Arial,宋体'; FONT-WEIGHT: normal; TEXT-DECORATION: none
+}
+
+/* 默认超级链接 */
+A:link,A:visited {color:#31659c; text-decoration:none; }
+A:hover {text-decoration:underline; }

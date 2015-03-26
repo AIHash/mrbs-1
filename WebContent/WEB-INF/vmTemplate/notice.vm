@@ -1,0 +1,4 @@
+$notice.message<br />
+#if($notice.acceptUrl && $notice.acceptUrl !="")
+	<a href="$notice.acceptUrl" target="_blank">详情请点击</a>
+#end

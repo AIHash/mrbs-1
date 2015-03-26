@@ -1,0 +1,17 @@
+/* 背景图片 */
+.menuBgBody {background-image:url(Menu_bg.jpg); }
+
+/* 菜单 */
+#menu {width:170px; margin:0px 0px; padding:0px; text-align:left; list-style:none; }
+#menu .item {margin:0px 0px; padding:0px; list-style:none; }
+#menu .item ul {border:0px solid #fffeea; margin:0; width:100%; padding:0px 0px 0px 33px; background:#fffeea; list-style:none; display:none; }
+#menu .item ul li {padding:0px 0px 0px 5px; }
+#menu .item .list {border:0; width:auto; margin-left: -15px; }
+
+/* 菜单一级标题 */
+A.title:link, A.title:visited, A.title:hover {
+color:#000000; display:block; background:url(menu_left.gif) no-repeat; font-weight:bold; font-size:12px; padding:1px 0 0 35px; width:100%; line-height:31px; cursor:pointer; text-decoration:none; }
+
+/* 菜单list */
+.menuItem{list-style-image:url("menu.gif"); padding:0px 0px 0px 5px; width:130px;}
+.menuItem_selected{list-style-image:url("menu_selected.gif"); padding:0px 0px 0px 5px; width:130px;}

@@ -1,0 +1,86 @@
+/* 背景 */
+.Input_bg{
+background-image:url(Input_bg.jpg);
+background-attachment:fixed;
+background-repeat:no-repeat;
+background-position: right bottom;
+}
+
+/* 查询区域背景 */
+.queryBackground{background-color:#eaf9ff; background-image: url(button_bar_bg.gif) repeat-x;}
+
+/* 导航区背景 */
+.navigatorLeft{height:22px; width:10px; background-image: url(SearchCornerLeft_bg.jpg);}
+.navigatorRight{height:22px; width:10px; background-image: url(SearchCornerRight_bg.jpg);}
+.navigatorMiddle{height:22px;vertical-align:bottom;background-image: url(Search_bg.jpg);}
+
+/* 必填项色块  */
+.RequiredBlank{background-color: #AFD7DF; height:15px; width:40px; border:1px solid #025f98;
+}
+
+/* 已预订会议色块  */
+.BookedBlank{background-color: #678cd8; height:15px; width:40px; border:1px solid #025f98;
+}
+
+/* 导航区图标 */
+.currentAddressImg{WIDTH:17px;background-repeat:no-repeat;vertical-align:bottom;background-image:url(navigate.gif);}
+
+/* 导航区下部 分割线 */
+.splitLineTable{WIDTH:99%;}
+.splitLineTd{height:2px;background-color:#004080; }
+
+/* 查询区域——必填项背景色 */
+.text_left_red2 {
+	BACKGROUND-COLOR: #AFD7DF; BORDER-BOTTOM: #ffffff 1px solid; HEIGHT: 15px; TEXT-ALIGN: right;
+}
+/* 查询区域——非必填项背景色 */
+.text_left2 {
+	BACKGROUND-COLOR: #c7e6f8; BORDER-BOTTOM: #ffffff 1px solid; HEIGHT: 20px; TEXT-ALIGN: right
+}
+
+/* 查询区域——输入域 */
+.text {
+   border-style:solid; border-width:1px; border-color:#99AAAA; font-family:tahoma; font-size:12px; background-color:#FFFFFF; color:#0000FF
+}
+.text_left1 {
+	BACKGROUND-COLOR: #c7e6f8; BORDER-BOTTOM: #ffffff 1px solid; HEIGHT: 20px; TEXT-ALIGN: left
+}
+.text-onfocus
+{
+   border-style:solid; border-width:1px; border-color:#FF8080; font-family:tahoma;  font-size:12px;
+   background-color:#FFFFFF; color:#0000FF
+}
+
+/* 查询区域——按钮 */
+.button{font-family:tahoma; font-size: 12px;	width: 60px;	height: 20px;	background-image: url(button.bmp);	border: none}
+.button2{font-family:tahoma; font-size: 12px;	width: 100px;	height: 20px;	background-image: url(button2.bmp);	border: none}
+.button-onfocus{font-family:tahoma; font-size: 12px;	width: 60px;	height: 20px;	background-image: url(button-onfocus.bmp);	border: none}
+.button-large{font-family:tahoma; font-size: 12px;	width: 120px;	height: 20px;	background-image: url(button-large.bmp);	border: none}
+.button-large-onfocus{font-family:tahoma; font-size: 12px;	width: 120px;	height: 20px;	background-image: url(button-large-onfocus.bmp);	border: none}
+
+/* 查询区域——按钮区域背景 */
+.buttonToolBar{background: #eaf9ff;border-color:#AFD7DF;height:28px; BORDER-RIGHT:0px;BORDER-TOP:0px; BORDER-LEFT:0px; BORDER-BOTTOM:0px; cellpadding:0px; cellspacing:0px; background-image: url(button_bar_bg.gif);}
+
+
+.table_title_12pt { BORDER-BOTTOM: #000000 1px solid;FONT-SIZE: 12px; FONT-WEIGHT: bold; HEIGHT: 18px; VERTICAL-ALIGN: middle
+}
+
+.table {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; BORDER-RIGHT: 0px; BORDER-TOP: 0px; WIDTH: 98%; cellpadding: 0; cellspacing: 0
+}
+
+/* table区域——按钮区域背景 */
+.buttonToolBar1{height:28px; BORDER-RIGHT:0px;BORDER-TOP:0px;BORDER-LEFT:0px;WIDTH:100%;BORDER-BOTTOM:0px;cellpadding:0px;cellspacing:0px;background-image: url(button_bar_bg.gif);}
+
+/* 列表文字链接样式 */
+.linkFontColor{color:#31659c; cursor:hand;}
+
+/* 表格控制 */
+.table_98per{width:98%; complete:complete;}
+.table_100per{width:100%;}
+.td_h5px{height:5px;}
+.td_w2per_h5px{height:5px; width:2%;}
+
+/*A 标签显示样式*/
+A:link,A:visited {text-decoration:none;color: blue;}
+A:hover {text-decoration:underline;color: bluecursor: pointer;}

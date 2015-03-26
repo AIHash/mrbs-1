@@ -1,0 +1,87 @@
+@CHARSET "utf-8";
+body {
+}
+td {
+	font-family: "宋体";
+	font-size: 12px;
+	font-style: normal;
+	line-height: 26px;
+	text-decoration: none;
+}
+.css {
+	font-family: "宋体";
+	font-size: 12px;
+	font-style: normal;
+	line-height: normal;
+	color: #000000;
+	text-decoration: none;
+}
+.link {
+	font-family: "宋体";
+	font-size: 12px;
+	font-style: normal;
+	line-height: normal;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+a:link {
+	font-family: "宋体";
+	font-size: 12px;
+	font-style: normal;
+	line-height: normal;
+	color: #1E1E1E;
+	text-decoration: none;
+}
+a:visited {
+	font-family: "宋体";
+	font-size: 12px;
+	font-style: normal;
+	line-height: normal;
+	color: #CC0099;
+	text-decoration: none;
+}
+a:hover {
+	font-family: "宋体";
+	font-size: 12px;
+	font-style: normal;
+	line-height: normal;
+	color: #FF0000;
+	text-decoration: none;
+}
+.z1 {
+	font-family: "宋体";
+	font-size: 12px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: normal;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.z2 {
+	font-family: "宋体";
+	font-size: 12px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: bold;
+	color: #FF6600;
+	text-decoration: none;
+}
+input {
+	font-family: "宋体";
+	font-size: 12px;
+	font-style: normal;
+	line-height: normal;
+	color: #000000;
+	text-decoration: none;
+	border: 1px solid #7F9DB9;
+	background-image: url(../images/input_1.gif);
+}
+.dabiaoti {
+	font-family: "宋体";
+	font-size: 14px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: bold;
+	color: #195da4;
+	text-decoration: none;
+}

@@ -1,0 +1,20 @@
+/*@import url(all.css); */
+
+/* leftFrame 部分 */
+/*@import url(left.css); */
+
+/* titleFrame 部分 */
+/*@import url(title.css); */
+
+/* splitFrame 部分 */
+/*@import url(split.css); */
+
+/* mainFrame 部分 */
+@import url(main.css); 
+
+/* gatagrid控件 部分 */
+@import url(td_style_ec.css); 
+
+/* UC风格 部分 */
+/*@import url(uc.css); */
+

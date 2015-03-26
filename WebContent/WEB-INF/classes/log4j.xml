@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+	<appender name="STDOUT" class="org.apache.log4j.ConsoleAppender">
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="[%d{yyyy-MM-dd HH:mm:ss}]%5p %c{1}-- %m%n" />
+		</layout>
+		<filter class="org.apache.log4j.varia.LevelRangeFilter">
+			<param name="levelMin" value="info" />
+			<param name="levelMax" value="error" />
+			<param name="AcceptOnMatch" value="true" />
+		</filter>
+	</appender>
+
+	<appender  name="ROLLINGFILE" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="DatePattern" value=".yyyy-MM-dd" />
+		<param name="append" value="true" />
+		<param name="File" value="d:/logs/mrbs/mrbs.log"/>
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="[%d{yyyy-MM-dd HH:mm:ss}]%5p %l -- %m%n" />
+		</layout>
+		<filter class="org.apache.log4j.varia.LevelRangeFilter">
+			<param name="levelMin" value="debug" />
+			<param name="levelMax" value="error" />
+			<param name="AcceptOnMatch" value="true" />
+		</filter>
+	</appender>
+
+	<logger name="org.springframework" additivity="true">
+		<level value="info" />
+	</logger>
+
+	<logger name="org.springframework.web" additivity="false">
+		<level value="error" />
+	</logger>
+
+	<logger name="org.hibernate" additivity="true">
+		<level value="error" />
+		<appender-ref ref="STDOUT" />
+		<appender-ref ref="ROLLINGFILE" />
+	</logger>
+
+	<logger name="org.apache" additivity="false">
+		<level value="info" />
+		<appender-ref ref="STDOUT" />
+		<appender-ref ref="ROLLINGFILE" />
+	</logger>
+
+	<logger name="com.wafersystems" additivity="false">
+		<level value="debug" />
+		<appender-ref ref="STDOUT" />
+		<appender-ref ref="ROLLINGFILE" />
+	</logger>
+
+	 <root>
+	  <level value="error" />
+	  <appender-ref ref="ROLLINGFILE" />
+	  <appender-ref ref="STDOUT" />
+	 </root>
+
+</log4j:configuration>

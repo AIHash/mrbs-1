@@ -1,0 +1,63 @@
+body {
+	padding: 0;
+	margin: 0;
+	background: #c0cacc;
+}
+
+.login {
+	margin: auto;
+	width: 963px;
+	height: 581px;
+	background: url(bg.jpg) no-repeat;
+	margin-top: 45px;
+}
+
+.login table {
+	position: absolute;
+	margin-top: 290px;
+	margin-left: 480px;
+	font-family: "微软雅黑", "黑体";
+	font-size: 16px;
+	color: #FFF;
+	margin-bottom: 100px;
+}
+.copydiv{
+	position: absolute;
+	margin-top: 470px;
+	margin-left: 80px;
+		text-align: center;
+	vertical-align: middle;
+	font-size: 14px;
+	margin-bottom: 30px;
+}
+
+.login .txt {
+	width: 165px;
+	height: 25px;
+	background: #2c7ba4;
+	border: 1px solid #a7a6aa;
+	font-size: 16px;
+	color: #FFF;
+	font-family: "微软雅黑", "黑体";
+}
+
+.login .btn {
+	background: url(btn.jpg) no-repeat;
+	width: 70px;
+	height: 70px;
+	border: 0;
+	color: white;
+	font-size: 25px;
+	font-family: "微软雅黑", "黑体";
+}
+
+#copyright {
+	margin: auto;
+	width: 100%;
+	line-height: 150%;
+	padding-top: 15px;
+	padding-bottom: 20px;
+	text-align: center;
+	vertical-align: middle;
+	font-size: 12px;
+}

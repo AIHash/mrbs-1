@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans    
+						http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+<!--///////////////////// NoticeJob Start ////////////////-->
+	<bean id="noticeTask"
+		class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject" ref="mailNoticeJob" />
+		<property name="targetMethod" value="doJob" />
+		<property name="concurrent" value="false" />
+	</bean>
+
+	<bean id="noticeTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail" ref="noticeTask" />
+		<!-- s、min、hour、Date of month、month、week、year(Optional) -->
+		<property name="cronExpression">
+			<value>0 0/2 * * * ?</value>
+		</property>
+	</bean>
+<!--///////////////////// NoticeJob End ////////////////-->
+
+<!--///////////////////// StatusJob Start ////////////////-->
+	<bean id="statusTask"
+		class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject" ref="statusJob" />
+		<property name="targetMethod" value="doJob" />
+		<property name="concurrent" value="false" />
+	</bean>
+
+	<bean id="statusTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail" ref="statusTask" />
+		<!-- s、min、hour、Date of month、month、week、year(Optional) -->
+		<property name="cronExpression">
+			<value>0 0/2 * * * ?</value>
+		</property>
+	</bean>
+<!--///////////////////// StatusJob End ////////////////-->
+
+<!--///////////////////// syncDepartment Start ////////////////-->
+	<bean id="syncTask"
+		class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject" ref="syncImportJob" />
+		<property name="targetMethod" value="insertData" />
+		<property name="concurrent" value="false" />
+	</bean>
+
+	<bean id="syncTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail" ref="syncTask" />
+		<!-- second、min、hour、Date of month、month、week、year(Optional) -->
+		<property name="cronExpression">
+			<value>0 0 2 ? * 1</value>
+		</property>
+	</bean>
+<!--///////////////////// syncDepartment Start ////////////////-->
+
+<!--///////////////////// sendSMS Start ////////////////-->
+	<!-- <bean id="SendSMSTask"
+		class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject" ref="sendSMSJob" />
+		<property name="targetMethod" value="doJob" />
+		<property name="concurrent" value="false" />
+	</bean>
+
+	<bean id="SendSMSTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail" ref="SendSMSTask" />
+		7 :s、min、hour、Date of month、month、week、year(Optional)
+		<property name="cronExpression">
+			<value>0 0/2 * * * ?</value>
+		</property>
+	</bean> -->
+<!--///////////////////// sendSMS End ////////////////-->
+
+<!--///////////////////// receiveSMS Start ////////////////-->
+	<!-- <bean id="ReceiveSMSTask"
+		class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject" ref="receiveSMSJob" />
+		<property name="targetMethod" value="doJob" />
+		<property name="concurrent" value="false" />
+	</bean>
+
+	<bean id="ReceiveSMSTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail" ref="ReceiveSMSTask" />
+		7 :s、min、hour、Date of month、month、week、year(Optional)
+		<property name="cronExpression">
+			<value>0 0/3 * * * ?</value>
+		</property>
+	</bean> -->
+<!--///////////////////// receiveSMS End ////////////////-->
+
+<!-- MCU quartz begin-->
+<bean id="mcuTask" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+	<property name="targetObject"  ref="mcuJob" />
+	<property name="targetMethod"  value="doJob" />
+	<property name="concurrent" value="false" />
+</bean>
+<bean id="mcuTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+	<property name="jobDetail" ref="mcuTask" />
+	<property name="cronExpression">
+		<value>0 0/2 * * * ?</value>
+	</property>
+</bean>
+<!-- MCU quartz end -->
+
+	<bean id="schedulerFactoryBean" lazy-init="false" autowire="no"
+		class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+		<property name="triggers">
+			<list>
+<!-- 
+			<ref bean="syncTrigger"/>
+ -->
+				<ref bean="noticeTrigger" />
+				<ref bean="statusTrigger" />
+				<!-- <ref bean="SendSMSTrigger" />
+				<ref bean="ReceiveSMSTrigger" /> -->
+				<ref bean="mcuTrigger"/>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+		<property name="javaMailProperties">
+			<props>
+				<prop key="mail.smtp.auth">true</prop>
+				<prop key="mail.smtp.timeout">25000</prop>
+				<!-- <prop key="mail.smtp.starttls.enable">true</prop> <prop key="mail.smtp.socketFactory.fallback">false</prop> 
+					<prop key="mail.smtp.socketFactory.class">javax.net.ssl.SSLSocketFactory</prop> 
+					<prop key="mail.smtp.port">465</prop> <prop key="mail.smtp.socketFactory.port">465</prop> 
+					<prop key="mail.transport.protocol">smtp</prop> -->
+			</props>
+		</property>
+		<property name="host" value="${smtp.address}" />
+		<property name="username" value="${mail.username}" />
+		<property name="password" value="${mail.pwd}" />
+	</bean>
+
+	<bean id="velocityEngine" class="org.springframework.ui.velocity.VelocityEngineFactoryBean">
+		<property name="resourceLoaderPath" value="/WEB-INF/vmTemplate/" />
+		<property name="velocityProperties">
+			<props>
+				<prop key="default.contentType">text/html;charset=utf-8</prop>
+				<prop key="output.encoding">utf-8</prop>
+				<prop key="input.encoding">utf-8</prop>
+			</props>
+		</property>
+	</bean>
+
+</beans>

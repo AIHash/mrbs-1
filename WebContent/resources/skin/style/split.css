@@ -1,0 +1,6 @@
+/* ±³¾°Í¼Æ¬ */
+.splitBgBody {background-image:url(splitter_bg.gif); }
+
+/* Òş²ØºÍÏÔÊ¾°´Å¥ */
+.splitLeftTd{height:79px; WIDTH:9px; background-image:url(splitter_left.gif);}
+.splitRightTd{height:79px; WIDTH:9px; background-image:url(splitter_right.gif);}

@@ -1,0 +1,10 @@
+BODY {
+	COLOR: #000000; FONT-FAMILY: 宋体; FONT-SIZE: 9pt;margin-left: 5px;
+}
+TABLE {
+	FONT-FAMILY: 宋体; FONT-SIZE: 9pt; FONT-WEIGHT: normal; TEXT-DECORATION: none
+}
+.button{font-family:tahoma; font-size: 12px;	width: 60px;	height: 20px;	background-image: url(button.bmp);	border: none}
+.footer_login {
+	COLOR: #666666; FONT-FAMILY: 'Arial', 'Helvetica'; FONT-SIZE: 9pt; FONT-WEIGHT: normal; TEXT-DECORATION: none;height:20}
+.error {COLOR: #ff0000; FONT-WEIGHT: bold}
