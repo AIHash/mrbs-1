@@ -1,7 +1,5 @@
 # Cisco MCU and TCS
 
-标签（空格分隔）： Cisco MCU TCS
-
 ---
 
 ## 综述
