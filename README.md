@@ -1,7 +1,5 @@
 # Cisco MCU and TCS
 
----
-
 ## 综述
 此文档是基于***会诊系统关于MCU相关的资料。描述了如何调用Cisco TelePresence Server API并结合实际项目中的会议去控制思科网真设备的启动关停以及其他操作。
 
